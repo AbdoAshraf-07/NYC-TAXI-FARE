@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bg-dark: #0B0E14;
+  --color-surface: #151921;
+  --color-surface-hover: #1C222C;
+  --color-border: rgba(255, 255, 255, 0.08);
+  
+  --color-taxi-yellow: #FACC15;
+  --color-taxi-yellow-glow: rgba(250, 204, 21, 0.15);
+  --color-taxi-orange: #FB923C;
+  --color-taxi-green: #22C55E;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-slate-200 antialiased selection:bg-taxi-yellow/30;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface border border-border rounded-xl backdrop-blur-sm shadow-2xl;
+  }
+  
+  .glow-yellow {
+    box-shadow: 0 0 20px -5px var(--color-taxi-yellow-glow);
+  }
+  
+  .glow-orange {
+    box-shadow: 0 0 20px -5px rgba(251, 146, 60, 0.15);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 20px -5px rgba(34, 197, 94, 0.15);
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-sm font-medium transition-all relative;
+  }
+  
+  .nav-link-active {
+    @apply text-taxi-yellow;
+  }
+  
+  .nav-underline {
+    @apply absolute -bottom-px left-0 right-0 h-0.5 bg-taxi-yellow rounded-full;
+  }
+}
+
+/* Custom chart styles for Recharts tooltips */
+.recharts-tooltip-wrapper {
+  @apply !outline-none;
+}
+
+.custom-tooltip {
+  @apply bg-surface/90 border border-white/10 p-3 rounded-lg backdrop-blur-md shadow-xl text-xs;
+}
+
+.chart-grid line {
+  @apply stroke-white/5;
+}

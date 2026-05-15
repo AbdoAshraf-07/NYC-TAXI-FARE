@@ -1,0 +1,6 @@
+{
+  "name": "NYC Taxi Predictor",
+  "description": "AI-powered real-time fare estimation, taxi group analytics, and batch processing platform for New York City.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI Analytics", "Real-time Prediction", "Batch Processing"]
+}
