@@ -1,0 +1,11 @@
+{
+    "intercept": 4.408078946228743,
+    "coefficients": [
+        2.755550903996806,
+        -0.011827288267080153
+    ],
+    "features_order": [
+        "trip_distance",
+        "passenger_count"
+    ]
+}
